@@ -4,9 +4,21 @@
     box-sizing: border-box;
 }
 
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
 body {
     margin: 60px;
+    height: 1430px;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 header {
@@ -104,7 +116,6 @@ nav ul li a:hover {
 .topstory {
     float: left;
     width: 68%;
-    height: 600px;
     border: 1px solid gray;
 }
 
@@ -125,23 +136,68 @@ nav ul li a:hover {
     line-height: 1.37em;
 }
 
+.topstory .btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+    margin: 35px 0;
+}
+
+.topstory .btn button {
+    padding: 4px 40px;
+}
+
+button h3 {
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.topstory .img-content {
+    display: flex;
+    margin: 30px 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topstory .img-content .list-img {
+    width: 150px;
+    height: 250px;
+}
+
+.topstory .img-content .list-img p {
+    word-wrap: break-word;
+    margin: 10px;
+}
+
+.topstory .review {
+    margin-top: -30px;
+    margin-left: 10px;
+}
+
+.topstory .review p {
+    margin: 10px 10px 10px 0;
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
 .social {
     float: right;
     width: 30%;
-    height: 300px;
+    height: 340px;
     border: 1px solid gray;
 }
 
 .social iframe {
     margin-left: 35px;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 .social button {
     width: 300px;
     height: 30px;
     margin-left: 35px;
-    margin-top: 3px;
+    margin-top: 13px;
 }
 
 .social h1, .navigate h1 {
@@ -151,7 +207,41 @@ nav ul li a:hover {
 .navigate {
     float: right;
     width: 30%;
-    height: 300px;
+    height: 250px;
     border: 1px solid gray;
     margin-top: 20px;
+}
+
+.navigate ul {
+    margin-top: 20px;
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+.navigate ul li {
+    margin-top: 7px;
+    margin-left: 30px;
+}
+
+footer {
+    margin-top: 10px;
+    border-top: 13px solid gray;
+    width: 100%;
+    transform: scaleX(1.10);
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    list-style: none;
+}
+
+footer ul li {
+    margin: 0 15px;
+}
+
+footer ul li a {
+    color: black;
 }
